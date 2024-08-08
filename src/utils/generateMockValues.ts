@@ -10,6 +10,8 @@ export function generateMockValue(schema: Schema): any {
         return faker.internet.url();
       } else if (schema.format === "uuid") {
         return faker.datatype.uuid();
+      } else if (["date", "dateTime"].includes(schema.format as string)) {
+        return faker.date.future().toISOString();
       } else {
         return faker.lorem.word();
       }

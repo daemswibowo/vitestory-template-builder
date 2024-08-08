@@ -1,4 +1,4 @@
-# vitestory-template-geneartor
+# vitestory-template-builder
 
 To install dependencies:
 
@@ -6,10 +6,16 @@ To install dependencies:
 bun install
 ```
 
-To run:
+Copy `.env.example` to `.env`
+
+Then run this command for development:
 
 ```bash
-bun run index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.1.3. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+For production, use `bun build` and it will generates:
+
+- `dist/template.html`
+- `dist/formSchema.json`
+- `dist/formExample.json`

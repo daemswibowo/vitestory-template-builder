@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun --watch index.ts",
-    "build": "bun build.ts"
+    "build": "bun build.ts && bun generateJsonSchema.ts > ./dist/formSchema.json && bun generateJsonFormExample.ts > ./dist/formExample.json"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
